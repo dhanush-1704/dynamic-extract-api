@@ -82,6 +82,13 @@ Formatting:
 
 Never wrap JSON inside markdown.
 Never explain anything.
+If a field name contains "time":
+- Return ONLY the time in HH:MM or HH:MM:SS format.
+- Do NOT include any date.
+
+If a field name contains "date":
+- Return ONLY the date in YYYY-MM-DD format.
+- Do NOT include any time.
 """
 
     response = client.models.generate_content(
